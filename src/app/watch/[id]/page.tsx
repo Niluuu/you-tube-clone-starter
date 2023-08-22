@@ -31,54 +31,49 @@ export default function Watch({ params }: { params: { id: string } }) {
               </div>
 
               <button className="h-10 flex flex-row items-center bg-stone-200 rounded-full px-4 hover:bg-stone-300">
-                <Image
-                  src="/bar.png"
-                  alt="icon"
-                  width={30}
-                  height={30}
-                  priority
-                />
-                <span className="font-bold  ml-2">Subscribe</span>
+         
+                <span className="font-bold">Subscribe</span>
               </button>
             </div>
             <div className="felx items-center">
               <div className="flex items-center px-2 cursor-pointer">
                 <div className="h-10 flex items-center rounded-tl-full rounded-bl-full bg-stone-200 hover:bg-stone-300 px-3">
                   <Image
-                    src="/bar.png"
+                    className="rotate-180"
+                    src="/thumb.png"
                     alt="icon"
-                    width={30}
-                    height={30}
+                    width={25}
+                    height={25}
                     priority
                   />
                   <span className="font-bold ml-2">23 mln</span>
                 </div>
-                <div className="h-10 flex items-center bg-stone-200 rounded-tr-full rounded-br-full  hover:bg-stone-300 px-3">
+                <div className="h-10 flex items-center bg-stone-200 rounded-tr-full rounded-br-full hover:bg-stone-300 px-3">
                   <Image
-                    src="/bar.png"
+                    src="/thumb.png"
                     alt="icon"
-                    width={30}
-                    height={30}
+                    width={25}
+                    height={25}
                     priority
                   />
                 </div>
 
                 <button className="h-10 flex flex-row items-center bg-stone-200 rounded-full px-4 hover:bg-stone-300 mx-4">
                   <Image
-                    src="/bar.png"
+                    src="/share.jpg"
                     alt="icon"
-                    width={30}
-                    height={30}
+                    width={25}
+                    height={25}
                     priority
                   />
                   <span className="font-bold  ml-2">Share</span>
                 </button>
                 <button className="h-10 flex flex-row items-center bg-stone-200 rounded-full px-2 hover:bg-stone-300">
                   <Image
-                    src="/bar.png"
+                    src="/dots.png"
                     alt="icon"
-                    width={30}
-                    height={30}
+                    width={25}
+                    height={25}
                     priority
                   />
                 </button>
@@ -86,7 +81,7 @@ export default function Watch({ params }: { params: { id: string } }) {
             </div>
           </div>
         </div>
-        <div className="">
+        <div>
           <VideoCard id="2322435" />
           <VideoCard id="232245" />
         </div>

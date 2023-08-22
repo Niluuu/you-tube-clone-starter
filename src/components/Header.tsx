@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useAppContext } from "@/contexts/appContext";
 
 export default function Header() {
   const [search, setSearch] = useState("");
+  const {toggleSidebar} = useAppContext();
 
   const handleInputChange = (e: any) => {
     setSearch(e.target.value);
@@ -17,9 +19,11 @@ export default function Header() {
   };
 
   return (
-    <nav className="flex flex-row h-fit p-3">
+    <nav className="flex flex-row h-fit py-0.5 px-4">
       <div className="flex flex-row w-22 items-center justify-center">
-        <div className="flex relative  w-10 rounded-full cursor-pointer duration-75 hover:before:bg-slate-100 before:content-[''] before:absolute before:inset-0 before:w-10 before:h-10 before:z-10 before:rounded-full">
+        <div className="flex relative  w-10 rounded-full cursor-pointer duration-75 hover:before:bg-slate-100 before:content-[''] before:absolute before:inset-0 before:w-10 before:h-10 before:z-10 before:rounded-full"
+          onClick={toggleSidebar}
+        >
           <Image
             src="/bar.png"
             className="z-20 m-1.5 "
@@ -58,22 +62,22 @@ export default function Header() {
             className="rounded-r-full border border-gray-300 w-16 bg-slate-100"
           >
             <Image
-              src="/seach.png"
+              src="/search.png"
               className="m-1.5"
               alt="search"
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               priority
             />
           </button>
         </form>
         <div className="flex relative w-10 rounded-full cursor-pointer duration-75 bg-slate-100  hover:before:bg-gray-300 before:content-[''] before:absolute before:inset-0 before:w-10 before:h-10 before:z-10 before:rounded-full">
           <Image
-            src="/bar.png"
+            src="/mic.svg"
             className="z-20 m-1.5 "
             alt="Vercel Logo"
-            width={30}
-            height={30}
+            width={25}
+            height={25}
             priority
           />
         </div>
@@ -81,7 +85,7 @@ export default function Header() {
       <div className="flex flex-row items-center w-15">
         <div className="flex relative w-10 rounded-full cursor-pointer duration-75 bg-slate-100  hover:before:bg-gray-300 before:content-[''] before:absolute before:inset-0 before:w-10 before:h-10 before:z-10 before:rounded-full mx-2">
           <Image
-            src="/bar.png"
+            src="/camera.png"
             className="z-20 m-1.5 "
             alt="Vercel Logo"
             width={30}
@@ -91,15 +95,15 @@ export default function Header() {
         </div>
         <div className="flex relative w-10 rounded-full cursor-pointer duration-75 bg-slate-100  hover:before:bg-gray-300 before:content-[''] before:absolute before:inset-0 before:w-10 before:h-10 before:z-10 before:rounded-full">
           <Image
-            src="/bar.png"
+            src="/bell.png"
             className="z-20 m-1.5 "
             alt="Vercel Logo"
-            width={30}
-            height={30}
+            width={25}
+            height={25}
             priority
           />
         </div>
-        <div className="w-12 h-12 rounded-full overflow-hidden ml-2 ">
+        <div className="w-10 h-10 rounded-full overflow-hidden ml-2 cursor-pointer">
           <Image
             src="/ava.jpg"
             alt="Vercel Logo"
