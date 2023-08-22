@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex flex-row">
       <SideBar />
 
-      <div className="grid grid-cols-4 ">
+      <div className="grid xxl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:gird-cols-2 ">
         <VideoCard id="2322435" />
         <VideoCard id="2322435" />
         <VideoCard id="2322435" />
