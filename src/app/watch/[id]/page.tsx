@@ -1,19 +1,33 @@
+"use client";
+
 import VideoCard, { VideoCardProps } from "@/components/VideoCard";
 import Image from "next/image";
 import videosData from "@/mockData/videos.json";
+import { useEffect, useState } from "react";
 
 export default function Watch({ params }: { params: { id: string } }) {
+  const [video, setVideo] = useState<VideoCardProps>();
+
+  useEffect(() => {
+    const foundVideo = videosData.find((video: any) => video.id === params.id);
+    setVideo(foundVideo);
+  }, [params.id]);
+
+  if (!video) {
+    return null;
+  }
+
   return (
     <div>
       <div className="bg-black felx justify-center items-center">
         <video autoPlay controls width="70%" height="10%" className="m-auto">
-          <source src="../videos/6.mp4" type="video/mp4" />
+          <source src={video.videoUrl} type="video/mp4" />
         </video>
       </div>
       <div className="flex">
         <div className="w-3/5 mx-20 my-2">
           <h1 className="font-bold text-lg w-max my-4">
-            Title one - Name video
+            {video.title}
           </h1>
           <div className="flex flex-row items-start justify-between">
             <div className="flex flex-row ">
@@ -46,7 +60,7 @@ export default function Watch({ params }: { params: { id: string } }) {
                     height={25}
                     priority
                   />
-                  <span className="font-bold ml-2">23 mln</span>
+                  <span className="font-bold ml-2">{video.watches} mln</span>
                 </div>
                 <div className="h-10 flex items-center bg-stone-200 rounded-tr-full rounded-br-full hover:bg-stone-300 px-3">
                   <Image
@@ -85,7 +99,7 @@ export default function Watch({ params }: { params: { id: string } }) {
           {videosData.map((video: VideoCardProps) => (
             <VideoCard
               id={video.id}
-              key={video.title}
+              key={video.id}
               title={video.title}
               description={video.description}
               watches={video.watches}
