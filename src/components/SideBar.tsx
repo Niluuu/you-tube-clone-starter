@@ -24,7 +24,7 @@ export default function SideBar() {
 
   return (
     <div
-      className={` bg-white scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-4 overflow-hidden first-letter ${
+      className={` bg-white scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-4 first-letter ${
         sidebarOpen ? "w-96" : "xxl:w-18 xl:w-18 lg:w-18 md:w-18 hidden"
       }`}
     >
