@@ -1,12 +1,13 @@
-import VideoCard from "@/components/VideoCard";
+import VideoCard, { VideoCardProps } from "@/components/VideoCard";
 import Image from "next/image";
+import videosData from "@/mockData/videos.json";
 
 export default function Watch({ params }: { params: { id: string } }) {
   return (
     <div>
       <div className="bg-black felx justify-center items-center">
         <video autoPlay controls width="70%" height="10%" className="m-auto">
-          <source src="/video.mp4" type="video/mp4" />
+          <source src="../videos/6.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="flex">
@@ -31,7 +32,6 @@ export default function Watch({ params }: { params: { id: string } }) {
               </div>
 
               <button className="h-10 flex flex-row items-center bg-stone-200 rounded-full px-4 hover:bg-stone-300">
-         
                 <span className="font-bold">Subscribe</span>
               </button>
             </div>
@@ -81,9 +81,18 @@ export default function Watch({ params }: { params: { id: string } }) {
             </div>
           </div>
         </div>
-        <div>
-          <VideoCard id="2322435" />
-          <VideoCard id="232245" />
+        <div className="w-4/12">
+          {videosData.map((video: VideoCardProps) => (
+            <VideoCard
+              id={video.id}
+              key={video.title}
+              title={video.title}
+              description={video.description}
+              watches={video.watches}
+              created={video.created}
+              videoUrl={video.videoUrl}
+            />
+          ))}
         </div>
       </div>
     </div>

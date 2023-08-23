@@ -12,7 +12,7 @@ const routes = [
     iconScr: "/home.png",
   },
   {
-    routePath: "/watch",
+    routePath: "/subscribed",
     routeName: "Subscribed",
     iconScr: "/subscribed.png",
   },
@@ -20,14 +20,35 @@ const routes = [
 
 export default function SideBar() {
   const pathname = usePathname();
-  const { sidebarOpen } = useAppContext();
+  const { sidebarOpen, toggleSidebar } = useAppContext();
 
   return (
     <div
-      className={`scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-4 overflow-hidden ${
-        sidebarOpen ? "w-96" : "w-18"
+      className={` bg-white scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-4 overflow-hidden first-letter ${
+        sidebarOpen ? "w-96" : "xxl:w-18 xl:w-18 lg:w-18 md:w-18 hidden"
       }`}
     >
+      <div className="xl:hidden xxl:hidden lg:hidden md:hidden sm:block">
+        <Link
+          onClick={toggleSidebar}
+          href="/"
+          className="flex flex-row items-center"
+        >
+          <div className="w-14 cursor-pointer ">
+            <Image
+              src="/white-logo.png"
+              alt="Vercel Logo"
+              width={100}
+              height={24}
+              priority
+            />
+          </div>
+          <p className="w-max font-bold pb-0.5 tracking-tight cursor-pointer">
+            You tube
+          </p>
+        </Link>
+      </div>
+
       {routes.map(({ routeName, routePath, iconScr }) => (
         <Link href={routePath} key={routePath}>
           <div
@@ -46,7 +67,9 @@ export default function SideBar() {
             <p
               className={` ${
                 pathname === routePath ? "font-bold" : "font-normal"
-              } ${sidebarOpen ? "text-md" : "text-xs truncate overflow-hidden"}`}
+              } ${
+                sidebarOpen ? "text-md" : "text-xs truncate overflow-hidden"
+              }`}
             >
               {routeName}
             </p>
