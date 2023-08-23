@@ -77,7 +77,7 @@ export default function Header() {
         </form>
         <div className="flex relative w-10 rounded-full cursor-pointer duration-75 bg-slate-100  hover:before:bg-gray-300 before:content-[''] before:absolute before:inset-0 before:w-10 before:h-10 before:z-10 before:rounded-full">
           <Image
-            src="/mic.svg"
+            src="/mic.png"
             className="z-20 m-1.5"
             alt="Vercel Logo"
             width={25}
