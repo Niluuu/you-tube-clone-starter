@@ -24,15 +24,17 @@ export default function SideBar() {
 
   return (
     <div
-      className={` bg-white scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-4 first-letter ${
-        sidebarOpen ? "w-96" : "xxl:w-18 xl:w-18 lg:w-18 md:w-18 hidden"
+      className={`scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-4 first-letter h-screen ${
+        sidebarOpen ? "w-1/3" : "w-18"
       }`}
     >
-      <div className="xl:hidden xxl:hidden lg:hidden md:hidden sm:block">
+      <div className={`xl:hidden xxl:hidden lg:hidden md:hidden sm:block `}>
         <Link
           onClick={toggleSidebar}
           href="/"
-          className="flex flex-row items-center"
+          className={`items-center ${
+            sidebarOpen ? "flex" : "block"
+          }`}
         >
           <div className="w-14 cursor-pointer ">
             <Image

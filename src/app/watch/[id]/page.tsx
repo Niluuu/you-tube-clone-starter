@@ -20,18 +20,16 @@ export default function Watch({ params }: { params: { id: string } }) {
   return (
     <div>
       <div className="bg-black felx justify-center items-center">
-        <video autoPlay controls width="70%" height="10%" className="m-auto">
+        <video autoPlay controls width="70%" height="10%" className="m-auto max-sm:w-full max-lg:w-full">
           <source src={video.videoUrl} type="video/mp4" />
         </video>
       </div>
-      <div className="flex">
-        <div className="w-3/5 mx-20 my-2">
-          <h1 className="font-bold text-lg w-max my-4">
-            {video.title}
-          </h1>
-          <div className="flex flex-row items-start justify-between">
-            <div className="flex flex-row ">
-              <div className="w-12 h-12 rounded-full overflow-hidden ">
+      <div className="flex flex-row max-sm:flex-col max-lg:flex-col">
+        <div className="w-3/5 mx-20 my-2 max-sm:w-full max-sm:mx-4 max-lg:w-4/5 max-lg:mx-8 ">
+          <h1 className="font-bold text-lg w-max my-4">{video.title}</h1>
+          <div className="flex flex-row items-start justify-between max-sm:flex-col max-sm:pt-2">
+            <div className="flex flex-row">
+              <div className="w-12 h-12 rounded-full overflow-hidden">
                 <Image
                   src="/ava.jpg"
                   alt="Vercel Logo"
@@ -80,7 +78,7 @@ export default function Watch({ params }: { params: { id: string } }) {
                     height={25}
                     priority
                   />
-                  <span className="font-bold  ml-2">Share</span>
+                  <span className="w-full font-bold ml-2">Share</span>
                 </button>
                 <button className="h-10 flex flex-row items-center bg-stone-200 rounded-full px-2 hover:bg-stone-300">
                   <Image
@@ -95,7 +93,7 @@ export default function Watch({ params }: { params: { id: string } }) {
             </div>
           </div>
         </div>
-        <div className="w-4/12">
+        <div className="w-4/12 max-sm:w-full max-lg:w-2/3 m-auto">
           {videosData.map((video: VideoCardProps) => (
             <VideoCard
               id={video.id}

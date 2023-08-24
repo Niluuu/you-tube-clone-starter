@@ -19,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <nav className="flex flex-row h-fit py-0.5 px-4">
+    <nav className="flex flex-row h-fit py-0.5 px-4 max-sm:justify-between">
       <div className="flex flex-row w-22 items-center justify-center">
         <div
           className="flex relative w-10 rounded-full cursor-pointer duration-75 hover:before:bg-slate-100 before:content-[''] before:absolute before:inset-0 before:w-10 before:h-10 before:z-10 before:rounded-full"
@@ -52,7 +52,7 @@ export default function Header() {
           </p>
         </Link>
       </div>
-      <div className="flex flex-row flex-1 items-center justify-center">
+      <div className="flex flex-row flex-1 items-center justify-center max-sm:hidden">
         <form onSubmit={handleSubmit} className="flex relative px-2 w-3/5">
           <input
             type="text"
