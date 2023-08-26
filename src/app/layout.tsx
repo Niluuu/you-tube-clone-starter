@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "../components/Header";
 import { AppProvider } from "@/contexts/appContext";
+import SideBar from "@/components/SideBar";
 
 export default function RootLayout({
   children,
@@ -17,7 +18,11 @@ export default function RootLayout({
         <AppProvider>
           <Header />
 
-          {children}
+          <div className="flex">
+            <SideBar />
+
+            {children}
+          </div>
         </AppProvider>
       </body>
     </html>

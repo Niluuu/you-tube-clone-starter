@@ -103,10 +103,7 @@ export default function Watch({ params }: { params: { id: string } }) {
 
         <div className="w-4/12 max-sm:w-full max-lg:w-2/3 m-auto">
           {videosData.map((video: VideoCardProps) => (
-            <VideoCard
-             video={video}
-             key={video.videoUrl}
-            />
+            <VideoCard video={video} key={video.videoUrl} />
           ))}
         </div>
       </div>
