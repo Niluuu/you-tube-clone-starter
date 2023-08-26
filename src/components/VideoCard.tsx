@@ -1,23 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { VideoProps } from "./types";
 
-export interface VideoCardProps {
-  id: string;
-  title?: string;
-  description?: string;
-  watches?: number;
-  created?: number;
-  videoUrl: string;
-}
+export default function VideoCard({ video }: VideoProps) {
+  const { id, videoUrl, title, watches, created } = video;
 
-export default function VideoCard({
-  id,
-  title,
-  description,
-  watches,
-  created,
-  videoUrl,
-}: VideoCardProps) {
   return (
     <Link href={`/watch/${id}`} key={id}>
       <div className="p-4 my-4 cursor-pointer">

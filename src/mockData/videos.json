@@ -4,41 +4,77 @@
     "title": "Nature",
     "videoUrl": "/videos/1.mp4",
     "watches": 111,
-    "created": 1
+    "created": 1,
+    "description": "Description of video",
+    "author": {
+      "profileName": "Natures beautiful",
+      "profilePhoto": "/ava.jpg",
+      "descriptionProfile": "This profile will share all beautiful nature"
+    }
   },
   {
     "id": "2",
     "title": "4K Relaxing Nature Sounds - Short Video Clips of Nature",
     "videoUrl": "/videos/2.mp4",
     "watches": 1234,
-    "created": 1
+    "created": 1,
+    "description": "Description of video",
+    "author": {
+      "profileName": "Natures beautiful",
+      "profilePhoto": "/ava.jpg",
+      "descriptionProfile": "This profile will share all beautiful nature"
+    }
   },
   {
     "id": "3",
     "title": "4K Relaxing Nature Sounds - Short Video Clips of Nature",
     "videoUrl": "/videos/3.mp4",
     "watches": 44,
-    "created": 1
+    "created": 1,
+    "description": "Description of video",
+    "author": {
+      "profileName": "Natures beautiful",
+      "profilePhoto": "/ava.jpg",
+      "descriptionProfile": "This profile will share all beautiful nature"
+    }
   },
   {
     "id": "4",
     "title": "Cafe Video Clips of Nature",
     "videoUrl": "/videos/4.mp4",
     "watches": 554,
-    "created": 1
+    "created": 1,
+    "description": "Description of video",
+    "author": {
+      "profileName": "Natures beautiful",
+      "profilePhoto": "/ava.jpg",
+      "descriptionProfile": "This profile will share all beautiful nature"
+    }
   },
   {
     "id": "5",
     "title": "Nature Video Clips of Nature",
     "videoUrl": "/videos/5.mp4",
     "watches": 190,
-    "created": 1
+    "created": 1,
+    "description": "Description of video",
+    "author": {
+      "profileName": "Natures beautiful",
+      "profilePhoto": "/ava.jpg",
+      "descriptionProfile": "This profile will share all beautiful nature"
+    }
   },
    {
      "id": "6",
      "title": "O'zbekistonlik",
      "videoUrl": "/videos/6.mp4",
      "watches": 109,
-     "created": 1
+     "created": 1,
+     "description": "Description of video",
+     "author": {
+       "profileName": "Natures beautiful",
+       "profilePhoto": "/ava.jpg",
+       "descriptionProfile": "This profile will share all beautiful nature"
+     }
    }
 ]
