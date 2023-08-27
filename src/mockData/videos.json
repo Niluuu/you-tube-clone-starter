@@ -63,18 +63,5 @@
       "profilePhoto": "/ava.jpg",
       "descriptionProfile": "This profile will share all beautiful nature"
     }
-  },
-   {
-     "id": "6",
-     "title": "O'zbekistonlik",
-     "videoUrl": "/videos/6.mp4",
-     "watches": 109,
-     "created": 1,
-     "description": "Description of video",
-     "author": {
-       "profileName": "Natures beautiful",
-       "profilePhoto": "/ava.jpg",
-       "descriptionProfile": "This profile will share all beautiful nature"
-     }
-   }
+  }
 ]

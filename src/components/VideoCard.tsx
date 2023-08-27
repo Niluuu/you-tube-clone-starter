@@ -9,7 +9,7 @@ export default function VideoCard({ video }: VideoProps) {
     <Link href={`/watch/${id}`} key={id}>
       <div className="p-4 my-4 cursor-pointer">
         <div className="rounded-lg overflow-hidden">
-          <video muted width="100%" height="300">
+          <video muted width="100%" height="100%">
             <source src={videoUrl} type="video/mp4" />
           </video>
         </div>
