@@ -66,7 +66,7 @@ export default function SideBar() {
 
       {/* DescktopSidebar */}
       <div
-        className={`scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-4 first-letter h-screen max-sm:hidden max-md:hidden lg:block${
+        className={`scrollbar-thumb-gray-900 scrollbar-track-gray-100 p-4 first-letter h-screen max-sm:hidden max-md:hidden lg:block ${
           sidebarOpen ? "w-1/3" : "w-18"
         }
         `}
