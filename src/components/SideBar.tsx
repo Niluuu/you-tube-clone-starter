@@ -22,13 +22,14 @@ export default function SideBar() {
   const pathname = usePathname();
   const { sidebarOpen, toggleSidebar } = useAppContext();
 
-  const isWatchScreen = pathname === "/watch";
   return (
     <>
       {/* MobileSidebar */}
       <div
-        className={`max-sm:block lg:hidden md:hidden ${
-          sidebarOpen ? "hidden" : "block"
+        className={`max-sm:block lg:hidden md:hidden max-md:hidden ${
+          sidebarOpen
+            ? "max-sm:hidden max-md:hidden"
+            : "max-sm:block max-md:block"
         }
         `}
       >

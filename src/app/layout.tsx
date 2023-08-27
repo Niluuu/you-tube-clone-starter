@@ -18,11 +18,7 @@ export default function RootLayout({
         <AppProvider>
           <Header />
 
-          <div className="flex">
-            <SideBar />
-
             {children}
-          </div>
         </AppProvider>
       </body>
     </html>

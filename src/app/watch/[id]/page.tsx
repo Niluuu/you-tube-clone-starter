@@ -10,7 +10,10 @@ export default function Watch({ params }: { params: { id: string } }) {
   const [video, setVideo] = useState<VideoCardProps>();
 
   useEffect(() => {
-    const foundVideo = videosData.find((video: VideoCardProps) => video.id === params.id);
+    const foundVideo = videosData.find(
+      (video: VideoCardProps) => video.id === params.id
+    );
+    
     setVideo(foundVideo);
   }, [params.id]);
 
@@ -19,7 +22,7 @@ export default function Watch({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div>
+    <>
       <div className="bg-black felx justify-center items-center ">
         <video
           autoPlay
@@ -107,6 +110,6 @@ export default function Watch({ params }: { params: { id: string } }) {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }
