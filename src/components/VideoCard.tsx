@@ -14,7 +14,7 @@ export default function VideoCard({ video }: VideoProps) {
           </video>
         </div>
         <div className="flex flex-row my-4 ">
-          <div className="w-14 h-12 rounded-full overflow-hidden ">
+          <div className="w-12 h-12 rounded-full overflow-hidden ">
             <Image
               src={author.profilePhoto}
               alt="Vercel Logo"
