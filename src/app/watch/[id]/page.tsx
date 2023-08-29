@@ -36,9 +36,9 @@ export default function Watch({ params }: { params: { id: string } }) {
       </div>
       <div className="flex flex-row m-auto max-sm:flex-col max-lg:flex-col ">
         <div className="w-3/5 my-2 max-lg:w-4/5 m-auto ma">
-          <h1 className="font-bold text-lg w-max my-4">{video.title}</h1>
+          <h1 className="font-bold text-lg  my-4">{video.title}</h1>
 
-          <div className="w-full flex items-start justify-between max-md:flex-col max-lg:bg-black max-sm:flex-col max-sm:pt-2 ">
+          <div className="w-full flex items-start justify-between max-md:flex-col  max-sm:flex-col max-sm:pt-2 ">
             <div className="flex flex-row w-max max-sm:mb-4">
               <div className="w-max h-18 rounded-full overflow-hidden">
                 <Image
@@ -52,7 +52,6 @@ export default function Watch({ params }: { params: { id: string } }) {
               <div className="mx-2 w-4/5">
                 <h1 className="font-bold w-max">{video.author.profileName}</h1>
                 <p className="text-gray-500 text-sm">
-                  {" "}
                   {video.author.subscibers} number subscribe
                 </p>
               </div>
