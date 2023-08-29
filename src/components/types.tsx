@@ -1,3 +1,15 @@
+interface Comments {
+  picture: string;
+  email: string;
+  date: number;
+  comment: string;
+}
+interface Author {
+  profileName: string;
+  profilePhoto: string;
+  descriptionProfile: string;
+  subscibers: number;
+}
 export interface VideoCardProps {
   id: string;
   title: string;
@@ -5,11 +17,8 @@ export interface VideoCardProps {
   watches: number;
   created: number;
   videoUrl: string;
-  author: {
-    profileName: string;
-    profilePhoto: string;
-    descriptionProfile: string;
-  };
+  author: Author;
+  comments: Array<Comments>;
 }
 export interface VideoProps {
   video: VideoCardProps;
