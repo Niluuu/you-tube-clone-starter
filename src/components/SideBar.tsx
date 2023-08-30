@@ -40,7 +40,7 @@ export default function SideBar() {
                 <Image
                   src={iconScr}
                   className="z-20 m-1.5 "
-                  alt="Vercel Logo"
+                  alt="Sidebar icon"
                   width={30}
                   height={30}
                   priority
@@ -81,7 +81,7 @@ export default function SideBar() {
               <Image
                 src={iconScr}
                 className="z-20 m-1.5 "
-                alt="Vercel Logo"
+                alt="Sidebar icon"
                 width={30}
                 height={30}
                 priority

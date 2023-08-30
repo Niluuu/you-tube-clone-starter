@@ -28,7 +28,7 @@ export default function Header() {
           <Image
             src="/bar.png"
             className="z-20 m-1.5 "
-            alt="Vercel Logo"
+            alt="Bar icon"
             width={30}
             height={30}
             priority
@@ -38,7 +38,7 @@ export default function Header() {
           <div className="w-14 ml-2 cursor-pointer ">
             <Image
               src="/white-logo.png"
-              alt="Vercel Logo"
+              alt="You tube logo"
               width={100}
               height={24}
               priority
@@ -65,7 +65,7 @@ export default function Header() {
             <Image
               src="/search.png"
               className="m-1.5"
-              alt="search"
+              alt="Search icon"
               width={25}
               height={25}
               priority
@@ -76,7 +76,7 @@ export default function Header() {
           <Image
             src="/mic.png"
             className="z-20 m-1.5"
-            alt="Vercel Logo"
+            alt="mic icon"
             width={25}
             height={25}
             priority
@@ -88,7 +88,7 @@ export default function Header() {
           <Image
             src="/camera.png"
             className="z-20 m-1.5 "
-            alt="Vercel Logo"
+            alt="Camera icon"
             width={30}
             height={30}
             priority
@@ -98,7 +98,7 @@ export default function Header() {
           <Image
             src="/bell.png"
             className="z-20 m-1.5 "
-            alt="Vercel Logo"
+            alt="Bell icon"
             width={25}
             height={25}
             priority
@@ -107,7 +107,7 @@ export default function Header() {
         <div className="w-10 h-10 rounded-full overflow-hidden ml-2 cursor-pointer">
           <Image
             src="/ava.jpg"
-            alt="Vercel Logo"
+            alt="Profile picture"
             width={100}
             height={100}
             priority

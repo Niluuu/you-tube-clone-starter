@@ -43,7 +43,7 @@ export default function Watch({ params }: { params: { id: string } }) {
               <div className="w-max h-18 rounded-full overflow-hidden">
                 <Image
                   src={video.author.profilePhoto}
-                  alt="Vercel Logo"
+                  alt="Profile photo"
                   width={100}
                   height={100}
                   priority
@@ -113,7 +113,7 @@ export default function Watch({ params }: { params: { id: string } }) {
               <div className="w-18 h-12 rounded-full overflow-hidden mr-4">
                 <Image
                   src={picture}
-                  alt="Vercel Logo"
+                  alt="Profile picture"
                   width={50}
                   height={50}
                   priority
