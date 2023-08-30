@@ -3,21 +3,24 @@ import Link from "next/link";
 import { VideoProps } from "./types";
 
 export default function VideoCard({ video }: VideoProps) {
-  const { id, videoUrl, title, watches, created, author } = video;
+  const { id, title, watches, created, author, videoImg } = video;
 
   return (
     <Link href={`/watch/${id}`} key={id}>
       <div className="p-4 my-4 cursor-pointer">
-        <div className="rounded-lg overflow-hidden">
-          <video muted width="100%" height="100%">
-            <source src={videoUrl} type="video/mp4" />
-          </video>
+        <div className="w-full h-[250px] relative rounded-lg overflow-hidden">
+          <Image
+            src={videoImg}
+            alt="Video image"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
         <div className="flex flex-row my-4 ">
           <div className="w-12 h-12 rounded-full overflow-hidden ">
             <Image
               src={author.profilePhoto}
-              alt="Vercel Logo"
+              alt="Profile photo"
               width={100}
               height={100}
               priority

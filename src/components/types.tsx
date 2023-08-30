@@ -17,6 +17,7 @@ export interface VideoCardProps {
   watches: number;
   created: number;
   videoUrl: string;
+  videoImg: string;
   author: Author;
   comments: Array<Comments>;
 }
