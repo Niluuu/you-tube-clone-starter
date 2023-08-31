@@ -1,7 +1,4 @@
 import "./globals.css";
-import Header from "../components/Header";
-import { AppProvider } from "@/contexts/appContext";
-import SideBar from "@/components/SideBar";
 
 export default function RootLayout({
   children,
@@ -14,13 +11,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.jpg" />
       </head>
-      <body className="w-full">
-        <AppProvider>
-          <Header />
-
-            {children}
-        </AppProvider>
-      </body>
+      <body className="w-full">{children}</body>
     </html>
   );
 }

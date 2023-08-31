@@ -1,7 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## See on production 
-Visit website on (https://you-tube-clone-4d3k.vercel.app/)
+## From creator
+This project was created for easy start clone project. 
+In `public` file I included all images, icons you will need. Also `public/videos` file will have all videos for render. Fill free to add more. 
+In `src/mockData` folder added some json for mock the data. 
 
 ## Getting Started
 
